@@ -3,33 +3,35 @@
 /// <reference path="Scripts/typings/threejs/three.d.ts" />
 
 class Demo {
+    private viewport: HTMLElement;
     private clock: THREE.Clock;
     private renderer: THREE.WebGLRenderer;
     private scene: THREE.Scene;
     private camera: THREE.PerspectiveCamera;
     private noiseMaterial: THREE.ShaderMaterial;
 
-    constructor() {
+    constructor(viewport: HTMLElement) {
+        this.viewport = viewport;
         // 
         // レンダラーの作成
         //
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
 
         // サイズ
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-        this.renderer.setSize(width, height);
+        var width = this.viewport.offsetWidth;
+        var height = this.viewport.offsetHeight;
+        this.renderer.setSize(this.viewport.offsetWidth, this.viewport.offsetHeight);
         // 背景色
         this.renderer.setClearColor(0x444444, 1);
         // #viewportの子にレンダラーのDOMを追加
-        document.querySelector("#viewport").appendChild(this.renderer.domElement);
+        viewport.appendChild(this.renderer.domElement);
         // クロックの開始
         this.clock = new THREE.Clock(true);
 
         //
         // カメラの作成
         //
-        var fov = 100;
+        var fov = 90;
         var aspect = width / height;
         this.camera = new THREE.PerspectiveCamera(fov, aspect);
         this.camera.position = new THREE.Vector3(0, 0, 100);
@@ -91,6 +93,10 @@ class Demo {
 */
     }
 
+    public resize() {
+        this.renderer.setSize(this.viewport.offsetWidth, this.viewport.offsetHeight);
+    }
+
     public render() {
         this.noiseMaterial.uniforms.time.value = this.clock.getElapsedTime() / 10.0;
         this.renderer.render(this.scene, this.camera);
@@ -98,13 +104,17 @@ class Demo {
 }
 
 window.onload = () => {
-    var demo = new Demo();
+    var demo = new Demo(document.getElementById("viewport"));
 
     var loopRendering = function () {
         // ブラウザに再描画の呼び出しを行わせる
         requestAnimationFrame(loopRendering);
 
         demo.render();
+    }
+
+    window.onresize = function () {
+        demo.resize();
     }
 
     loopRendering();
