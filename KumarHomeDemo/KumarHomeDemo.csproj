@@ -18,12 +18,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.css" />
-    <Content Include="Css\font-awesome.min.css" />
+    <Content Include="Scripts\font-awesome\css\font-awesome.min.css" />
     <Content Include="Css\layouts\marketing-old-ie.css" />
     <Content Include="Css\layouts\marketing.css" />
     <Content Include="Css\main-grid-old-ie.css" />
     <Content Include="Css\main-grid.css" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Images\Books-256.png" />
     <Content Include="Images\my-icon.png" />
     <Content Include="index.html" />
@@ -38,10 +38,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Scripts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\font-awesome\fonts\FontAwesome.otf" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
