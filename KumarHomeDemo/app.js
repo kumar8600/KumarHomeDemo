@@ -39,14 +39,12 @@ var Demo = (function () {
         // メッシュ
         var geometry = new THREE.CubeGeometry(500, 500, 500);
         var material = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+        material.wireframe = true;
         var cubeMesh = new THREE.Mesh(geometry, material);
         this.scene.add(cubeMesh);
     }
-    Demo.prototype.beginRendering = function () {
+    Demo.prototype.render = function () {
         this.renderer.render(this.scene, this.camera);
-
-        // ブラウザに再描画の呼び出しを行わせる
-        requestAnimationFrame(this.beginRendering);
     };
     return Demo;
 })();
@@ -59,7 +57,14 @@ window.onload = function () {
         return;
     }
 
-    demo.beginRendering();
+    var loopRendering = function () {
+        demo.render();
+
+        // ブラウザに再描画の呼び出しを行わせる
+        requestAnimationFrame(loopRendering);
+    };
+
+    loopRendering();
 };
 //
 //
