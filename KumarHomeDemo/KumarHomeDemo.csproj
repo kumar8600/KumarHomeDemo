@@ -23,22 +23,10 @@
     <Content Include="Css\layouts\marketing.css" />
     <Content Include="Css\main-grid-old-ie.css" />
     <Content Include="Css\main-grid.css" />
-    <Content Include="Fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Images\Books-256.png" />
     <Content Include="Images\my-icon.png" />
     <Content Include="index.html" />
-    <Content Include="Scripts\fonts\droid\droid_sans_bold.typeface.js" />
-    <Content Include="Scripts\fonts\droid\droid_sans_mono_regular.typeface.js" />
-    <Content Include="Scripts\fonts\droid\droid_sans_regular.typeface.js" />
-    <Content Include="Scripts\fonts\droid\droid_serif_bold.typeface.js" />
-    <Content Include="Scripts\fonts\droid\droid_serif_regular.typeface.js" />
-    <Content Include="Scripts\fonts\droid\README.txt" />
-    <Content Include="Scripts\fonts\gentilis_bold.typeface.js" />
-    <Content Include="Scripts\fonts\gentilis_regular.typeface.js" />
-    <Content Include="Scripts\fonts\helvetiker_bold.typeface.js" />
-    <Content Include="Scripts\fonts\helvetiker_regular.typeface.js" />
-    <Content Include="Scripts\fonts\optimer_bold.typeface.js" />
-    <Content Include="Scripts\fonts\optimer_regular.typeface.js" />
     <Content Include="Scripts\smooth-scroll.js" />
     <Content Include="Scripts\three.min.js" />
     <Content Include="Scripts\typeface.js" />
@@ -50,12 +38,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Scripts\fonts\droid\NOTICE" />
-    <Content Include="Scripts\fonts\LICENSE" />
-    <Content Include="Fonts\fontawesome-webfont.eot" />
-    <Content Include="Fonts\fontawesome-webfont.ttf" />
-    <Content Include="Fonts\fontawesome-webfont.woff" />
-    <Content Include="Fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
